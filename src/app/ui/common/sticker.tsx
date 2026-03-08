@@ -25,14 +25,14 @@ export const Sticker = ({ title, children, imageSrc, imageAlt }: StickerProps) =
         whileTap={{ scale: 0.95 }}
         onHoverStart={() => console.log("hover started!")}
         onClick={handleOpen}
-        className="flex overflow-hidden w-86 h-100"
+        className="flex overflow-hidden w-70 h-80 min-w-0"
         >
         <Image
             src={imageSrc}
             alt={imageAlt ?? title ?? ""}
             width={540}
             height={540}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
         />
         </motion.button>
     </div>
